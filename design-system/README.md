@@ -45,3 +45,11 @@ Preserve this exact preset across both repositories. Avoid introducing independe
 Run the desktop repository's documented lint/typecheck/test/build commands locally, and the Android repository's `./gradlew :app:testDebugUnitTest` + an actual device build locally. Preserve upstream sync via the forks. Review changes and tests before merging to each fork's `main`.
 
 **Status:** Configuration reference only. UI migration and platform QA are pending. GitHub Actions are intentionally not triggered by these branch-only commits.
+
+## Foundation implementation status
+
+- Both repositories mirror the official shadcn Neutral light/dark tokens and Purple chart palette in `design-system/shadcn-theme.json`.
+- Mac loads `design-system/shadcn-theme.css` in `index.html`, mapping current semantic CSS variables to the preset.
+- Android maps the shared tokens to Compose `ShadcnPalette`, Material 3 colors, compatibility colors, and shapes.
+- Next steps: bundle DM Sans and Space Grotesk offline, adopt Phosphor icons, migrate components and screens incrementally.
+- Full platform builds and visual QA are pending.
