@@ -51,5 +51,15 @@ Run the desktop repository's documented lint/typecheck/test/build commands local
 - Both repositories mirror the official shadcn Neutral light/dark tokens and Purple chart palette in `design-system/shadcn-theme.json`.
 - Mac loads `design-system/shadcn-theme.css` in `index.html`, mapping current semantic CSS variables to the preset.
 - Android maps the shared tokens to Compose `ShadcnPalette`, Material 3 colors, compatibility colors, and shapes.
-- Next steps: bundle DM Sans and Space Grotesk offline, adopt Phosphor icons, migrate components and screens incrementally.
+- Next steps: expand Phosphor icon coverage and migrate screen-specific components progressively.
 - Full platform builds and visual QA are pending.
+
+## Validation checkpoint — 26 October 2026
+
+- The exact Neutral / Purple chart preset tokens are stored identically in each fork.
+- DM Sans and Space Grotesk variable fonts are bundled under SIL OFL, with license notices.
+- Phosphor regular icons (MIT) are applied to 14 desktop icon names and to the Android mini-player playback/favorite controls.
+- Desktop: renderer build, ESLint (0 errors), TypeScript check, focused Phosphor tests, and separate UI / queue / playback suites passed in a remote Node 24 environment.
+- Desktop: the complete Jest run and one memory-heavy renderer suite exceeded the remote environment's memory limit. Full regression suite still pending.
+- Android: three targeted color regression assertions are checked in. Device build and `./gradlew :app:testDebugUnitTest` still pending; Android SDK/JDK were not available in the test sandbox.
+- This is a staged foundation. Phosphor usage and Rhea component styling across the remaining screens are still incremental tasks.
