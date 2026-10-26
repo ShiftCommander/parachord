@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "source": "https://ui.shadcn.com/create?preset=b6W2kHjuVs",
+  "presetCode": "b6W2kHjuVs",
+  "configuration": {
+    "style": "rhea",
+    "baseColor": "neutral",
+    "theme": "neutral",
+    "chartColor": "purple",
+    "iconLibrary": "phosphor",
+    "font": "dm-sans",
+    "fontHeading": "space-grotesk",
+    "radius": "default",
+    "menuAccent": "subtle",
+    "menuColor": "default"
+  }
+}

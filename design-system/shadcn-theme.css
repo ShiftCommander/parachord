@@ -1,0 +1,130 @@
+/* Generated from official shadcn/ui Neutral theme + Purple chart palette.
+ * Preset: b6W2kHjuVs (Rhea, Neutral, DM Sans, Space Grotesk, Phosphor).
+ * Keep design-system/shadcn-theme.json synchronized across Mac and Android.
+ * Bundled OFL variable fonts render offline (licenses: design-system/licenses/).
+ */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../assets/fonts/dm_sans_variable.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/space_grotesk_variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.827 0.119 306.383);
+  --chart-2: oklch(0.627 0.265 303.9);
+  --chart-3: oklch(0.558 0.288 302.321);
+  --chart-4: oklch(0.496 0.265 301.924);
+  --chart-5: oklch(0.438 0.218 303.724);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.625rem;
+  /* Compatibility bridge for Parachord's existing CSS consumers. */
+  --bg-primary: var(--background);
+  --bg-secondary: var(--sidebar);
+  --bg-elevated: var(--card);
+  --bg-inset: var(--muted);
+  --bg-tertiary: var(--secondary);
+  --text-primary: var(--foreground);
+  --text-secondary: var(--muted-foreground);
+  --text-tertiary: var(--muted-foreground);
+  --border-default: var(--border);
+  --border-light: var(--input);
+  --border-subtle: var(--border);
+  --card-bg: var(--card);
+  --card-border: var(--border);
+  --accent-primary: var(--primary);
+  --accent-primary-hover: color-mix(in oklch, var(--primary) 87%, var(--background));
+  --accent-secondary: var(--primary);
+  --accent-tertiary: var(--primary);
+  --accent-soft: var(--muted-foreground);
+  --accent-surface: var(--accent);
+  --accent-primary-alpha-06: color-mix(in srgb, var(--primary) 6%, transparent);
+  --accent-primary-alpha-08: color-mix(in srgb, var(--primary) 8%, transparent);
+  --accent-primary-alpha-10: color-mix(in srgb, var(--primary) 10%, transparent);
+  --accent-primary-alpha-15: color-mix(in srgb, var(--primary) 15%, transparent);
+  --accent-primary-alpha-20: color-mix(in srgb, var(--primary) 20%, transparent);
+  --accent-primary-alpha-30: color-mix(in srgb, var(--primary) 30%, transparent);
+  --accent-primary-alpha-50: color-mix(in srgb, var(--primary) 50%, transparent);
+  --accent-primary-alpha-60: color-mix(in srgb, var(--primary) 60%, transparent);
+  --nav-inactive: var(--muted-foreground);
+  --hover-bg-subtle: var(--muted);
+  --hover-bg-default: var(--accent);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Space Grotesk', var(--font-sans);
+}
+:root.dark, .dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.827 0.119 306.383);
+  --chart-2: oklch(0.627 0.265 303.9);
+  --chart-3: oklch(0.558 0.288 302.321);
+  --chart-4: oklch(0.496 0.265 301.924);
+  --chart-5: oklch(0.438 0.218 303.724);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+/* Headings use the preset's independent heading font once installed. */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+
+/* Preserve the same typography in native form controls. */
+body, button, input, select, textarea { font-family: var(--font-sans); }
