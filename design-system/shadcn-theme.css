@@ -1,8 +1,23 @@
 /* Generated from official shadcn/ui Neutral theme + Purple chart palette.
  * Preset: b6W2kHjuVs (Rhea, Neutral, DM Sans, Space Grotesk, Phosphor).
  * Keep design-system/shadcn-theme.json synchronized across Mac and Android.
- * Fonts fall back to system sans-serif until offline font assets are bundled.
+ * Bundled OFL variable fonts render offline (licenses: design-system/licenses/).
  */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../assets/fonts/dm_sans_variable.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/space_grotesk_variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -110,3 +125,6 @@
 }
 /* Headings use the preset's independent heading font once installed. */
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+
+/* Preserve the same typography in native form controls. */
+body, button, input, select, textarea { font-family: var(--font-sans); }
